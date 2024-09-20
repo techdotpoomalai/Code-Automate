@@ -1,0 +1,16 @@
+.doc{
+    background-color: rgb(250, 224, 224);
+    height: max-content;
+    padding-left: 10px;
+}
+.menu{
+    background-color: rgb(225, 235, 235);
+    height: max-content;
+}
+.view{
+    background-color: rgb(234, 234, 241);
+    max-height: 700px;
+    min-height: 500px;
+    text-align: center;
+    overflow-y: auto;
+}
