@@ -2,19 +2,17 @@ import json
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
-from code_automate import Codeautomate
 
 label_encoder = LabelEncoder()
 
-class Preprocess(Codeautomate):
+class Preprocess():
     def __init__(self):
-        super().__init__()
+        pass
 
     def process(self,col,prepros):
         col_dict=json.loads(col)
         cols=[key for key, value in col_dict.items() if value]
         df=[]
-        print(cols,prepros)
         try:
             df = pd.read_csv(f"preprocess.csv")
             if prepros == 'onehot_encode':
@@ -33,3 +31,5 @@ class Preprocess(Codeautomate):
             return records
         except:
             return []
+        
+    
